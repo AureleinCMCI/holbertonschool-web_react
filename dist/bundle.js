@@ -1,0 +1,38 @@
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/*!**************************************!*\
+  !*** ./TypeScript/task_0/js/main.ts ***!
+  \**************************************/
+
+// 2. Create two students and store them in an array
+var student1 = {
+    firstName: "Alice",
+    lastName: "Dupont",
+    age: 22,
+    location: "Paris"
+};
+var student2 = {
+    firstName: "Bob",
+    lastName: "Martin",
+    age: 25,
+    location: "Lyon"
+};
+var studentsList = [student1, student2];
+studentsList.forEach(function (element) { return console.log(element); });
+var table = document.createElement('table');
+document.body.appendChild(table);
+studentsList.forEach(function (student) {
+    var row = document.createElement('tr');
+    var firstNameCell = document.createElement('td');
+    firstNameCell.textContent = student.firstName;
+    var locationCell = document.createElement('td');
+    locationCell.textContent = student.location;
+    row.appendChild(firstNameCell);
+    row.appendChild(locationCell);
+    table.appendChild(row);
+});
+document.body.appendChild(table);
+
+/******/ })()
+;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnVuZGxlLmpzIiwibWFwcGluZ3MiOiI7Ozs7OztBQVFBLG9EQUFvRDtBQUNwRCxJQUFNLFFBQVEsR0FBWTtJQUN4QixTQUFTLEVBQUUsT0FBTztJQUNsQixRQUFRLEVBQUUsUUFBUTtJQUNsQixHQUFHLEVBQUUsRUFBRTtJQUNQLFFBQVEsRUFBRSxPQUFPO0NBQ2xCLENBQUM7QUFFRixJQUFNLFFBQVEsR0FBWTtJQUN4QixTQUFTLEVBQUUsS0FBSztJQUNoQixRQUFRLEVBQUUsUUFBUTtJQUNsQixHQUFHLEVBQUUsRUFBRTtJQUNQLFFBQVEsRUFBRSxNQUFNO0NBQ2pCLENBQUM7QUFFRixJQUFNLFlBQVksR0FBYyxDQUFDLFFBQVEsRUFBRSxRQUFRLENBQUMsQ0FBQztBQUVyRCxZQUFZLENBQUMsT0FBTyxDQUFDLFVBQUMsT0FBTyxJQUFLLGNBQU8sQ0FBQyxHQUFHLENBQUMsT0FBTyxDQUFDLEVBQXBCLENBQW9CLENBQUMsQ0FBQztBQUV4RCxJQUFNLEtBQUssR0FBcUIsUUFBUSxDQUFDLGFBQWEsQ0FBQyxPQUFPLENBQUMsQ0FBQztBQUNoRSxRQUFRLENBQUMsSUFBSSxDQUFDLFdBQVcsQ0FBQyxLQUFLLENBQUMsQ0FBQztBQUVqQyxZQUFZLENBQUMsT0FBTyxDQUFDLFVBQUMsT0FBTztJQUMzQixJQUFNLEdBQUcsR0FBRyxRQUFRLENBQUMsYUFBYSxDQUFDLElBQUksQ0FBQyxDQUFDO0lBRXpDLElBQU0sYUFBYSxHQUFHLFFBQVEsQ0FBQyxhQUFhLENBQUMsSUFBSSxDQUFDLENBQUM7SUFDbkQsYUFBYSxDQUFDLFdBQVcsR0FBRyxPQUFPLENBQUMsU0FBUyxDQUFDO0lBRTlDLElBQU0sWUFBWSxHQUFHLFFBQVEsQ0FBQyxhQUFhLENBQUMsSUFBSSxDQUFDLENBQUM7SUFDbEQsWUFBWSxDQUFDLFdBQVcsR0FBRyxPQUFPLENBQUMsUUFBUSxDQUFDO0lBRTVDLEdBQUcsQ0FBQyxXQUFXLENBQUMsYUFBYSxDQUFDLENBQUM7SUFDL0IsR0FBRyxDQUFDLFdBQVcsQ0FBQyxZQUFZLENBQUMsQ0FBQztJQUU5QixLQUFLLENBQUMsV0FBVyxDQUFDLEdBQUcsQ0FBQyxDQUFDO0FBRXpCLENBQUMsQ0FBQztBQUNGLFFBQVEsQ0FBQyxJQUFJLENBQUMsV0FBVyxDQUFDLEtBQUssQ0FBQyxDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vdHlwZXNjcmlwdF9kZXBlbmRlbmNpZXMvLi9UeXBlU2NyaXB0L3Rhc2tfMC9qcy9tYWluLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIDEuIERlZmluZSB0aGUgU3R1ZGVudCBpbnRlcmZhY2VcclxuaW50ZXJmYWNlIFN0dWRlbnQge1xyXG4gIGZpcnN0TmFtZTogc3RyaW5nO1xyXG4gIGxhc3ROYW1lOiBzdHJpbmc7XHJcbiAgYWdlOiBudW1iZXI7XHJcbiAgbG9jYXRpb246IHN0cmluZztcclxufVxyXG5cclxuLy8gMi4gQ3JlYXRlIHR3byBzdHVkZW50cyBhbmQgc3RvcmUgdGhlbSBpbiBhbiBhcnJheVxyXG5jb25zdCBzdHVkZW50MTogU3R1ZGVudCA9IHtcclxuICBmaXJzdE5hbWU6IFwiQWxpY2VcIixcclxuICBsYXN0TmFtZTogXCJEdXBvbnRcIixcclxuICBhZ2U6IDIyLFxyXG4gIGxvY2F0aW9uOiBcIlBhcmlzXCJcclxufTtcclxuXHJcbmNvbnN0IHN0dWRlbnQyOiBTdHVkZW50ID0ge1xyXG4gIGZpcnN0TmFtZTogXCJCb2JcIixcclxuICBsYXN0TmFtZTogXCJNYXJ0aW5cIixcclxuICBhZ2U6IDI1LFxyXG4gIGxvY2F0aW9uOiBcIkx5b25cIlxyXG59O1xyXG5cclxuY29uc3Qgc3R1ZGVudHNMaXN0OiBTdHVkZW50W10gPSBbc3R1ZGVudDEsIHN0dWRlbnQyXTtcclxuXHJcbnN0dWRlbnRzTGlzdC5mb3JFYWNoKChlbGVtZW50KSA9PiBjb25zb2xlLmxvZyhlbGVtZW50KSk7XHJcblxyXG5jb25zdCB0YWJsZTogSFRNTFRhYmxlRWxlbWVudCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3RhYmxlJyk7XHJcbmRvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQodGFibGUpO1xyXG5cclxuc3R1ZGVudHNMaXN0LmZvckVhY2goKHN0dWRlbnQpID0+IHtcclxuICBjb25zdCByb3cgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCd0cicpO1xyXG5cclxuICBjb25zdCBmaXJzdE5hbWVDZWxsID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgndGQnKTtcclxuICBmaXJzdE5hbWVDZWxsLnRleHRDb250ZW50ID0gc3R1ZGVudC5maXJzdE5hbWU7XHJcblxyXG4gIGNvbnN0IGxvY2F0aW9uQ2VsbCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3RkJyk7XHJcbiAgbG9jYXRpb25DZWxsLnRleHRDb250ZW50ID0gc3R1ZGVudC5sb2NhdGlvbjtcclxuXHJcbiAgcm93LmFwcGVuZENoaWxkKGZpcnN0TmFtZUNlbGwpO1xyXG4gIHJvdy5hcHBlbmRDaGlsZChsb2NhdGlvbkNlbGwpO1xyXG5cclxuICB0YWJsZS5hcHBlbmRDaGlsZChyb3cpO1xyXG5cclxufSlcclxuZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZCh0YWJsZSk7XHJcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==
