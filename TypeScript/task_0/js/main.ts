@@ -1,3 +1,4 @@
+// 1. Define the Student interface
 interface Student {
   firstName: string;
   lastName: string;
@@ -5,6 +6,7 @@ interface Student {
   location: string;
 }
 
+// 2. Create two students and store them in an array
 const student1: Student = {
   firstName: "Alice",
   lastName: "Dupont",
@@ -21,39 +23,24 @@ const student2: Student = {
 
 const studentsList: Student[] = [student1, student2];
 
-function renderTable(students: Student[]) {
-  const table = document.createElement("table");
-  table.border = "1";
+studentsList.forEach((element) => console.log(element));
 
-  // En-tête
-  const thead = document.createElement("thead");
-  const headerRow = document.createElement("tr");
-  ["First Name", "Last Name", "Age", "Location"].forEach(text => {
-    const th = document.createElement("th");
-    th.textContent = text;
-    headerRow.appendChild(th);
-  });
-  thead.appendChild(headerRow);
-  table.appendChild(thead);
+const table: HTMLTableElement = document.createElement('table');
+document.body.appendChild(table);
 
-  // Corps du tableau
-  const tbody = document.createElement("tbody");
-  students.forEach(student => {
-    const row = document.createElement("tr");
-    Object.values(student).forEach(value => {
-      const td = document.createElement("td");
-      td.textContent = value.toString();
-      row.appendChild(td);
-    });
-    tbody.appendChild(row);
-  });
-  table.appendChild(tbody);
+studentsList.forEach((student) => {
+  const row = document.createElement('tr');
 
-  // Ajout dans le DOM (ici dans le body, mais tu peux choisir un autre container)
-  document.body.appendChild(table);
-}
+  const firstNameCell = document.createElement('td');
+  firstNameCell.textContent = student.firstName;
 
-// Appel de la fonction après que le DOM soit chargé
-document.addEventListener("DOMContentLoaded", () => {
-  renderTable(studentsList);
-});
+  const locationCell = document.createElement('td');
+  locationCell.textContent = student.location;
+
+  row.appendChild(firstNameCell);
+  row.appendChild(locationCell);
+
+  table.appendChild(row);
+
+})
+document.body.appendChild(table);
